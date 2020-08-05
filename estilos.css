@@ -1,0 +1,173 @@
+.{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+img{
+	width: 300px;
+	margin-top: 25px;
+	margin-left: 50px;
+}
+li{
+	float: left;
+	list-style: none;
+	padding: 10px;
+	
+}
+nav{
+	float: right;
+	margin-top: 75px;
+	margin-right: 25px;
+	background: yellow;
+}
+a{
+	text-decoration: none;
+	font-family: times new Cambria;
+	color: black;	
+}
+header{
+	background: yellow;
+}
+
+li:hover a{
+	color: white;
+}
+
+li:hover{
+	background: gold; 
+	border-radius: 5px;
+}
+
+section{
+	background-color: gold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+
+.container-all{
+    position: relative;
+    max-width: 1000px;
+    width: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.slide{
+    display: flex;
+    transform: translate3d(0, 0, 0);
+    transition: all 600ms;
+    animation-name: autoplay;
+    animation-duration: 6.5s;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+.item-slide{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    flex-grow: 0;
+    max-width: 100%;
+}
+
+
+input[id="1"]:checked ~ .slide{
+    animation: none;
+    transform: translate3d(0, 0, 0);
+}
+
+input[id="1"]:checked ~ .pagination .pagination-item[for="1"]{
+    background: #fff;
+}
+
+input[id="2"]:checked ~ .slide{
+    animation: none;
+    transform: translate3d(calc(-100% * 1), 0, 0);
+}
+
+input[id="2"]:checked ~ .pagination .pagination-item[for="2"]{
+    background: #fff;
+}
+
+
+input[id="3"]:checked ~ .slide{
+    animation: none;
+    transform: translate3d(calc(-100% * 2), 0, 0);
+}
+
+input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
+    background: #fff;
+}
+
+
+@keyframes autoplay{
+    33%{
+        transform: translate3d(calc(-100% * 0), 0, 0);
+    }
+    
+    66%{
+        transform: translate3d(calc(-100% * 1), 0, 0);
+    }
+    
+    100%{
+        transform: translate3d(calc(-100% * 2), 0, 0);
+    }
+}
+
+main{
+	background-color: black;
+	height: 550px;
+}
+
+.bloque1{
+	
+	width: 40%;
+	margin: 40px;
+	padding-top: 40px;
+}
+
+.bloque2{
+	
+	width: 40%;
+	float: right;
+	margin-top: -315px;
+	
+}
+
+h1{
+	padding: 40px;
+}
+body{
+	background-color:black;
+}
+
+.main1{
+	background-color: black;
+}
+
+.bloque3{
+
+	width: 40%;
+	float: right;
+	padding-right: 40px;
+	
+}
+
+.bloque4{
+	
+	width: 40%;
+	float: right;
+	padding-right: 20px;
+	
+}
+footer{
+	width: 100%;
+	height: 50px;
+	background: rgba(0,0,0,0.7);
+	background-color: gold;
+}
